@@ -1,3 +1,5 @@
+<h1> Edit existing user </h1>
+
 <% if false %>
 <form accept-charset="UTF-8" action="/users" method="post">
   <label for="email">Email:</label>
@@ -23,7 +25,6 @@
 <% end %>
 <% end %>
 
-
 <%= form_for @user do |f| %>
   <%= f.label :email %>
   <%= f.email_field :email, :placeholder => 'email@email.com' %><br />
@@ -35,5 +36,3 @@
   <%= f.password_field :password %><br />
   <%= f.submit %>
 <% end %>
-
-
