@@ -26,6 +26,16 @@
 <% end %>
 
 <%= form_for @user do |f| %>
+
+  <% if @user.errors.any? %>
+  <ul>
+  <% @user.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+
+  <% end %>
+  
   <%= f.label :email %>
   <%= f.email_field :email, :placeholder => 'email@email.com' %><br />
 
